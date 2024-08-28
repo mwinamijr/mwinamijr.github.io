@@ -43,16 +43,12 @@ function Home() {
                 </h1>
                 <p className="mb-1x">I am a Full-Stack web developer, working with React for Frontend and Djange Framework for Backend development. I also Use React Native for Mobile Apps development. (Android and IOS)</p>
                 <p className="mb-1x">I am a also a competent Graphics Designer, Video Editor,VFX artist and Blender 3D Modelling artist.</p>
-                <div className="intro_btn-action p-5">
-                  <Link to="/resume" className="text_2 p-2">
-                    <div className="btn btn-primary">
-                      My Resume
-                    </div>
+                <div className="home-button p-5">
+                  <Link to="/resume" className="col-md-12 text-center p-2">
+                    <button>My Resume</button>
                   </Link>
-                  <Link to="/contact" className='p-2'>
-                    <div className="btn btn-primary">
-                      Contact Me
-                    </div>
+                  <Link to="/contact" className="col-md-12 text-center p-2">
+                    <button>Contact Me</button>
                   </Link>
                 </div>
               </div>
