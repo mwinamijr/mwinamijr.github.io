@@ -1,27 +1,36 @@
-import { Link } from "react-router-dom"
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-function Header() {
+function Navbar() {
   return (
-    <div className="container">
-      <header id="header" className="">
-        <div className="container d-flex align-items-center">
-
-          <h1 className="logo me-auto"><Link to="/">Athumani Mwinami</Link></h1>
-        
-          <nav id="navbar" className="navbar order-last order-lg-0">
-            <ul>
-              <li><Link className="active" to="/">Home</Link></li>
-              <li><Link to="/about">Kuhusu</Link></li>
-              <li><Link to="/services">Huduma</Link></li>
-              <li><Link to="/contact-us">Wasiliana nasi</Link></li>
-            </ul>
-            <i className="bi bi-list mobile-nav-toggle"></i>
-          </nav>
-
+    <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      <div className="container">
+        <Link className="navbar-brand" to="/">Athumani Mwinami</Link>
+        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span className="navbar-toggler-icon"></span>
+        </button>
+        <div className="collapse navbar-collapse" id="navbarNav">
+          <ul className="navbar-nav ms-auto">
+            <li className="nav-item">
+              <Link className="nav-link" to="/">Home</Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/about">About</Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/resume">Resume</Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/services">Services</Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/contact">Contact</Link>
+            </li>
+          </ul>
         </div>
-      </header>
-    </div>
-  )
+      </div>
+    </nav>
+  );
 }
 
-export default Header
+export default Navbar;

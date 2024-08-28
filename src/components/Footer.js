@@ -1,11 +1,13 @@
-import React from 'react'
+import React from 'react';
 
 function Footer() {
   return (
-    <div>
-      Footer
-    </div>
-  )
+    <footer className="bg-light text-center text-lg-start">
+      <div className="text-center p-3">
+        &copy; {new Date().getFullYear()} My Portfolio. All rights reserved.
+      </div>
+    </footer>
+  );
 }
 
-export default Footer
+export default Footer;
