@@ -54,7 +54,7 @@ const About: React.FC = () => {
   ];
 
   const professionalInfo = [
-    { label: "Degree", value: "Bachelor in CS" },
+    { label: "Degree", value: "Bachelor in ICT" },
     { label: "Email", value: "mwinamijr@gmail.com" },
     { label: "Freelance", value: "Available" },
   ];

@@ -64,11 +64,12 @@ const Resume: React.FC = () => {
 
   const education = [
     {
-      title: "Bachelor of Computer Science",
+      title:
+        "Bachelor of Science in Information and Communication Technology - (BSc ICT)",
       period: "2024 - 2027",
-      location: "Institute of Accountancy Arusha, Dar es salaam campus",
+      location: "The Open University of Tanzania (OUT)",
       description:
-        "I Studied Computer science, website and mobile applications development and graphics design just to get a certificate.",
+        "I Studied Bachelor of science in ICT, where i obtain knowledge and skills for website and mobile applications development and graphics design. I already had these skills before but I wanted to offcially go through proper educations channels and NOT just to get a certificate.",
     },
     {
       title: "Open Foundation Program (OFP)",
