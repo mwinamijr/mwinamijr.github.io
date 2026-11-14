@@ -24,7 +24,7 @@ const Header: React.FC = () => {
           <Link
             to="/"
             onClick={closeMenu}
-            className="text-xl md:text-2xl font-bold bg-gradient-to-r from-cyan-300 via-blue-400 to-violet-400 bg-clip-text text-transparent tracking-wide"
+            className="text-xl md:text-2xl font-bold text-brand-300 tracking-wide"
           >
             Athumani Mwinami
           </Link>
@@ -37,12 +37,12 @@ const Header: React.FC = () => {
                   <Link
                     to={link.path}
                     className={`relative font-medium transition-colors ${
-                      active ? "text-cyan-300" : "text-gray-300 hover:text-white"
+                      active ? "text-brand-300" : "text-gray-300 hover:text-white"
                     }`}
                   >
                     {link.name}
                     {active && (
-                      <span className="absolute left-0 -bottom-1 w-full h-0.5 bg-gradient-to-r from-blue-500 to-violet-500 rounded-full" />
+                      <span className="absolute left-0 -bottom-1 w-full h-0.5 bg-gradient-to-r from-brand-500 to-accent-500 rounded-full" />
                     )}
                   </Link>
                 </li>
@@ -53,7 +53,7 @@ const Header: React.FC = () => {
                 href={companyUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1 px-4 py-2 rounded-lg text-sm font-semibold text-white bg-gradient-to-r from-blue-600 to-violet-600 hover:opacity-90 transition"
+                className="inline-flex items-center gap-1 px-4 py-2 rounded-lg text-sm font-semibold text-white bg-accent-600 hover:bg-accent-700 transition"
               >
                 {companyName} <ArrowUpRight className="w-4 h-4" />
               </a>
@@ -64,7 +64,7 @@ const Header: React.FC = () => {
             onClick={() => setIsOpen(!isOpen)}
             aria-label={isOpen ? "Close menu" : "Open menu"}
             aria-expanded={isOpen}
-            className="lg:hidden p-2 text-gray-200 hover:text-white focus:outline-none focus:ring-2 focus:ring-blue-400 rounded-md"
+            className="lg:hidden p-2 text-gray-200 hover:text-white focus:outline-none focus:ring-2 focus:ring-brand-400 rounded-md"
           >
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -83,7 +83,7 @@ const Header: React.FC = () => {
                   onClick={closeMenu}
                   className={`block text-lg font-medium ${
                     location.pathname === link.path
-                      ? "text-cyan-300"
+                      ? "text-brand-300"
                       : "text-gray-300 hover:text-white"
                   }`}
                 >
@@ -96,7 +96,7 @@ const Header: React.FC = () => {
                 href={companyUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1 text-lg font-semibold text-violet-300"
+                className="inline-flex items-center gap-1 text-lg font-semibold text-accent-300"
               >
                 {companyName} <ArrowUpRight className="w-4 h-4" />
               </a>

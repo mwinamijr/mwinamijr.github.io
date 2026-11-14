@@ -1,5 +1,22 @@
 @import "tailwindcss";
 
+/* Brand colours from the TechDometz logo: blue #2ca3db, orange #f37028 */
+@theme {
+  --color-brand-50: #eaf6fc;
+  --color-brand-200: #b5def3;
+  --color-brand-300: #7fc8ec;
+  --color-brand-400: #4fb4e3;
+  --color-brand-500: #2ca3db;
+  --color-brand-600: #1f8fc4;
+  --color-brand-700: #18729e;
+
+  --color-accent-300: #f9a77a;
+  --color-accent-400: #f68a4e;
+  --color-accent-500: #f37028;
+  --color-accent-600: #f37028;
+  --color-accent-700: #d65a15;
+}
+
 html {
   scroll-behavior: smooth;
 }

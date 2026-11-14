@@ -23,11 +23,11 @@ const ResumeItem: React.FC<ResumeItemProps> = ({
   return (
     <div
       className={`relative pl-6 ${
-        !noBorder ? "pb-8 border-l-2 border-blue-200" : ""
+        !noBorder ? "pb-8 border-l-2 border-brand-200" : ""
       }`}
     >
       {!noBorder && (
-        <div className="absolute -left-2 top-0 w-4 h-4 bg-blue-600 rounded-full border-4 border-white"></div>
+        <div className="absolute -left-2 top-0 w-4 h-4 bg-brand-600 rounded-full border-4 border-white"></div>
       )}
       <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
         <h4 className="text-xl font-bold text-gray-800 mb-2">{title}</h4>
@@ -44,7 +44,7 @@ const ResumeItem: React.FC<ResumeItemProps> = ({
           <ul className="space-y-2">
             {items.map((item, index) => (
               <li key={index} className="flex items-start gap-2 text-gray-700">
-                <span className="text-blue-600 mt-1.5 flex-shrink-0">•</span>
+                <span className="text-brand-600 mt-1.5 flex-shrink-0">•</span>
                 <span>{item}</span>
               </li>
             ))}
@@ -152,7 +152,7 @@ const Resume: React.FC = () => {
             <div className="space-y-8">
               {/* Summary */}
               <div>
-                <h3 className="text-2xl font-bold text-gray-800 mb-6 border-b-2 border-blue-600 pb-2 inline-block">
+                <h3 className="text-2xl font-bold text-gray-800 mb-6 border-b-2 border-brand-600 pb-2 inline-block">
                   Summary
                 </h3>
                 <ResumeItem
@@ -166,7 +166,7 @@ const Resume: React.FC = () => {
                       key={index}
                       className="flex items-center gap-2 text-gray-700"
                     >
-                      <span className="text-blue-600">{info.icon}</span>
+                      <span className="text-brand-600">{info.icon}</span>
                       <span className="text-sm">{info.text}</span>
                     </div>
                   ))}
@@ -175,7 +175,7 @@ const Resume: React.FC = () => {
 
               {/* Education */}
               <div>
-                <h3 className="text-2xl font-bold text-gray-800 mb-6 border-b-2 border-blue-600 pb-2 inline-block">
+                <h3 className="text-2xl font-bold text-gray-800 mb-6 border-b-2 border-brand-600 pb-2 inline-block">
                   Education
                 </h3>
                 <div className="space-y-6">
@@ -195,7 +195,7 @@ const Resume: React.FC = () => {
 
             {/* Right Column */}
             <div>
-              <h3 className="text-2xl font-bold text-gray-800 mb-6 border-b-2 border-blue-600 pb-2 inline-block">
+              <h3 className="text-2xl font-bold text-gray-800 mb-6 border-b-2 border-brand-600 pb-2 inline-block">
                 Professional Experience
               </h3>
               <div className="space-y-6">

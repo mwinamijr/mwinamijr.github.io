@@ -16,7 +16,7 @@ const Footer: React.FC = () => (
     <div className="max-w-6xl mx-auto px-6 py-10 flex flex-col items-center space-y-6">
       <Link
         to="/"
-        className="text-2xl font-bold bg-gradient-to-r from-cyan-300 via-blue-400 to-violet-400 bg-clip-text text-transparent"
+        className="text-2xl font-bold text-brand-300"
       >
         {name}
       </Link>
@@ -29,7 +29,7 @@ const Footer: React.FC = () => (
             target="_blank"
             rel="noopener noreferrer"
             aria-label={label}
-            className="p-2 rounded-full bg-slate-800/60 hover:text-cyan-300 hover:scale-110 transition"
+            className="p-2 rounded-full bg-slate-800/60 hover:text-brand-300 hover:scale-110 transition"
           >
             <Icon className="w-5 h-5" />
           </a>
@@ -49,14 +49,14 @@ const Footer: React.FC = () => (
             href={companyUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-cyan-300 font-semibold hover:underline"
+            className="text-brand-300 font-semibold hover:underline"
           >
             {companyName}
           </a>
         </p>
       </div>
     </div>
-    <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 via-violet-500 to-cyan-400" />
+    <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-brand-500 via-accent-500 to-brand-400" />
   </footer>
 );
 

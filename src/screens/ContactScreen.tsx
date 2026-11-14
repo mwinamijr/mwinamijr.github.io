@@ -44,24 +44,24 @@ const Contact: React.FC = () => {
     href?: string;
   }[] = [
     {
-      icon: <MapPin className="w-6 h-6 text-blue-600" />,
+      icon: <MapPin className="w-6 h-6 text-brand-600" />,
       title: "Address",
       content: "Mbezi Mwisho, Dar es Salaam, Tanzania",
     },
     {
-      icon: <Phone className="w-6 h-6 text-blue-600" />,
+      icon: <Phone className="w-6 h-6 text-brand-600" />,
       title: "Call",
       content: phone,
       href: phoneHref,
     },
     {
-      icon: <Mail className="w-6 h-6 text-blue-600" />,
+      icon: <Mail className="w-6 h-6 text-brand-600" />,
       title: "Email",
       content: email,
       href: `mailto:${email}`,
     },
     {
-      icon: <MessageCircle className="w-6 h-6 text-blue-600" />,
+      icon: <MessageCircle className="w-6 h-6 text-brand-600" />,
       title: "WhatsApp",
       content: "Chat on WhatsApp",
       href: whatsappUrl,
@@ -99,7 +99,7 @@ const Contact: React.FC = () => {
                         {item.title}
                       </h3>
                       {item.href ? (
-                        <a href={item.href} className="text-blue-600 hover:underline">
+                        <a href={item.href} className="text-brand-600 hover:underline">
                           {item.content}
                         </a>
                       ) : (
@@ -144,7 +144,7 @@ const Contact: React.FC = () => {
                       id="name-field"
                       value={formData.name}
                       onChange={handleChange}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-transparent outline-none transition-all"
                       required
                     />
                   </div>
@@ -162,7 +162,7 @@ const Contact: React.FC = () => {
                       id="email-field"
                       value={formData.email}
                       onChange={handleChange}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-transparent outline-none transition-all"
                       required
                     />
                   </div>
@@ -180,7 +180,7 @@ const Contact: React.FC = () => {
                       id="subject-field"
                       value={formData.subject}
                       onChange={handleChange}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-transparent outline-none transition-all"
                       required
                     />
                   </div>
@@ -198,7 +198,7 @@ const Contact: React.FC = () => {
                       rows={10}
                       value={formData.message}
                       onChange={handleChange}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all resize-none"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-transparent outline-none transition-all resize-none"
                       required
                     ></textarea>
                   </div>
@@ -206,7 +206,7 @@ const Contact: React.FC = () => {
                   <div className="md:col-span-2 text-center">
                     <button
                       type="submit"
-                      className="px-8 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+                      className="px-8 py-3 bg-accent-600 text-white font-semibold rounded-lg hover:bg-accent-700 focus:ring-4 focus:ring-accent-300 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
                     >
                       Send Message
                     </button>
