@@ -1,5 +1,5 @@
 import React from "react";
-import { HelmetProvider, Helmet } from "react-helmet-async";
+import { Helmet } from "react-helmet-async";
 import { ChevronRight } from "lucide-react";
 import image from "./../assets/img/my-profile-img.jpg";
 import { description } from "./constants";
@@ -32,8 +32,8 @@ const SkillBar: React.FC<SkillProps> = ({ name, percentage }) => {
 
 const About: React.FC = () => {
   const leftSkills: SkillProps[] = [
-    { name: "HTML", percentage: 100 },
-    { name: "CSS", percentage: 80 },
+    { name: "HTML & CSS / Tailwind", percentage: 95 },
+    { name: "TypeScript", percentage: 80 },
     { name: "JavaScript", percentage: 85 },
     { name: "React", percentage: 85 },
     { name: "Python", percentage: 85 },
@@ -48,7 +48,7 @@ const About: React.FC = () => {
   ];
 
   const personalInfo = [
-    { label: "Website", value: "mwinamijr.github.io" },
+    { label: "Company", value: "TechDometz (Founder & CEO)" },
     { label: "Phone", value: "+255 625 799 380" },
     { label: "City", value: "Dar es salaam, TZ" },
   ];
@@ -56,14 +56,13 @@ const About: React.FC = () => {
   const professionalInfo = [
     { label: "Degree", value: "Bachelor in ICT" },
     { label: "Email", value: "mwinamijr@gmail.com" },
-    { label: "Freelance", value: "Available" },
+    { label: "Available for", value: "Projects & partnerships" },
   ];
 
   return (
-    <HelmetProvider>
+    <>
       <Helmet>
-        <meta charSet="utf-8" />
-        <title>About | Mwinami Jr</title>
+        <title>About | Athumani Mwinami</title>
         <meta name="description" content={description} />
       </Helmet>
 
@@ -74,8 +73,8 @@ const About: React.FC = () => {
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-800 mb-4">About</h2>
             <p className="text-lg italic text-gray-600 max-w-3xl mx-auto">
-              I am an enthusiastic and creative website and Graphics designer.
-              Also VFX and 3D modelling artist.
+              Founder &amp; CEO of TechDometz, full-stack developer and creative
+              — building technology for East Africa since 2019.
             </p>
           </div>
 
@@ -93,7 +92,7 @@ const About: React.FC = () => {
             {/* Info Content */}
             <div className="lg:col-span-8">
               <h2 className="text-3xl font-bold text-gray-800 mb-4">
-                Web Developer &amp; Graphics Designer.
+                Founder, Full-Stack Developer &amp; Designer.
               </h2>
 
               <div className="grid md:grid-cols-2 gap-6 my-6">
@@ -125,10 +124,12 @@ const About: React.FC = () => {
               </div>
 
               <p className="text-gray-600 leading-relaxed">
-                Get all designs from scratch. From websites, Logo and video
-                editing with stunning Visual Effects created with best tools
-                available. Also 3D models of different objects like Logo and
-                Architecture building maps.
+                I lead TechDometz, where we build School ERP, hospital and
+                pharmacy systems, offline-first POS and custom software for
+                institutions across Tanzania. I still write code every day —
+                React and TypeScript on the frontend, Django and Python on the
+                backend, React Native for mobile — and I bring a designer's eye
+                from years of graphics, video, VFX and Blender 3D work.
               </p>
             </div>
           </div>
@@ -142,8 +143,7 @@ const About: React.FC = () => {
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-800 mb-4">Skills</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              These are skills that I have which I perform them with Industry
-              standard softwares.
+              The tools I use to build TechDometz products and creative work.
             </p>
           </div>
 
@@ -173,7 +173,7 @@ const About: React.FC = () => {
           </div>
         </div>
       </section>
-    </HelmetProvider>
+    </>
   );
 };
 

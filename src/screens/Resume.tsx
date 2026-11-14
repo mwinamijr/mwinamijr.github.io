@@ -1,5 +1,5 @@
 import React from "react";
-import { HelmetProvider, Helmet } from "react-helmet-async";
+import { Helmet } from "react-helmet-async";
 import { MapPin, Phone, Mail } from "lucide-react";
 import { description } from "./constants";
 
@@ -57,7 +57,7 @@ const ResumeItem: React.FC<ResumeItemProps> = ({
 
 const Resume: React.FC = () => {
   const contactInfo = [
-    { icon: <MapPin className="w-4 h-4" />, text: "Mbezi, Dar es salaam, TZ" },
+    { icon: <MapPin className="w-4 h-4" />, text: "Mbezi, Dar es Salaam, TZ" },
     { icon: <Phone className="w-4 h-4" />, text: "+255 625 799 380" },
     { icon: <Mail className="w-4 h-4" />, text: "mwinamijr@gmail.com" },
   ];
@@ -69,40 +69,40 @@ const Resume: React.FC = () => {
       period: "2024 - 2027",
       location: "The Open University of Tanzania (OUT)",
       description:
-        "I Studied Bachelor of science in ICT, where i obtain knowledge and skills for website and mobile applications development and graphics design. I already had these skills before but I wanted to offcially go through proper educations channels and NOT just to get a certificate.",
+        "Formalising years of self-taught experience in web and mobile application development, systems and design through a recognised degree programme.",
     },
     {
       title: "Open Foundation Program (OFP)",
       period: "2023 - 2024",
       location: "The Open University of Tanzania (OUT)",
       description:
-        "I studied Foundation program so that I can proceed further with my education",
+        "Foundation programme for entry into the BSc ICT degree.",
     },
     {
       title: "Advanced Secondary Education",
       period: "2022 - 2023",
       location: "Hayatul Islamiya SS, Babati",
       description:
-        "After a long stay out of school while learning different skills such as web development, graphics design, VFX and 3D modelling I decided to sit For an ACSEE examination so that I can complete my education and properly being certified.",
+        "Returned to formal education to sit the ACSEE examination after years of self-directed learning in web development, graphics design, VFX and 3D modelling.",
     },
     {
       title: "Secondary Education",
       period: "2007 - 2010",
       location: "Ibra Secondary School, Kondoa",
-      description: "I studied and completed my secondary education",
+      description: "Completed secondary education (CSEE).",
     },
   ];
 
   const experience = [
     {
-      title: "CEO and Web developer",
+      title: "Founder & CEO",
       period: "2019 - Present",
-      location: "Techdometz, Dar es salaam",
+      location: "TechDometz, Dar es Salaam",
       items: [
-        "Head of Techdometz and Senior web developer",
-        "Lead in the design, development, and implementation of the graphic, layout, and production communication materials",
-        "Supervise the assessment of all graphic materials in order to ensure quality and accuracy of the design",
-        "Video editing, production, VFX and 3D modelling",
+        "Founded and lead TechDometz: software, AI, creative media, electronics and IT services",
+        "Lead architecture and development of School ERP, TechDometz Learn, HMS, Pharmacy and POS products",
+        "Senior full-stack developer (React, TypeScript, Django, React Native)",
+        "Direct brand, design, video, VFX and 3D work for clients and products",
       ],
     },
     {
@@ -128,10 +128,9 @@ const Resume: React.FC = () => {
   ];
 
   return (
-    <HelmetProvider>
+    <>
       <Helmet>
-        <meta charSet="utf-8" />
-        <title>Resume | Mwinami Jr</title>
+        <title>Resume | Athumani Mwinami</title>
         <meta name="description" content={description} />
       </Helmet>
 
@@ -141,13 +140,9 @@ const Resume: React.FC = () => {
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-800 mb-6">Resume</h2>
             <p className="text-gray-600 max-w-4xl mx-auto leading-relaxed">
-              After my Secondary education I followed my passion in Graphics
-              design and video editing where I self learned all my skills with
-              the help of internet. I further increased my knowledge in website
-              development, furthermore I decided to broaden my knowledge by
-              learning 3D modelling and VFX. After that I wanted to be
-              recognized by getting Certificate from recognized Institutions,
-              hence I resumed my studies.
+              Self-taught in graphics design, video editing, web development,
+              3D and VFX, I founded TechDometz in 2019 and now lead it as CEO
+              while completing a BSc in ICT at The Open University of Tanzania.
             </p>
           </div>
 
@@ -162,7 +157,7 @@ const Resume: React.FC = () => {
                 </h3>
                 <ResumeItem
                   title="Athumani Mwinami"
-                  description="Innovative and deadline-driven Web developer and Graphic Designer with 3+ years of experience designing and developing user-centered digital/print marketing material from initial concept to final, polished deliverable."
+                  description="Founder & CEO of TechDometz and full-stack developer. I lead product, engineering and design for software used by schools, hospitals, pharmacies and businesses in Tanzania, and still build hands-on with React, Django and React Native."
                   noBorder
                 />
                 <div className="mt-4 flex flex-wrap gap-4 pl-6">
@@ -219,7 +214,7 @@ const Resume: React.FC = () => {
           </div>
         </div>
       </section>
-    </HelmetProvider>
+    </>
   );
 };
 

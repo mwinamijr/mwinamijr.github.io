@@ -1,7 +1,7 @@
 import React, { useState, FormEvent } from "react";
-import { HelmetProvider, Helmet } from "react-helmet-async";
-import { MapPin, Phone, Mail } from "lucide-react";
-import { description } from "./constants";
+import { Helmet } from "react-helmet-async";
+import { MapPin, Phone, Mail, MessageCircle } from "lucide-react";
+import { description, email, phone, phoneHref, whatsappUrl } from "./constants";
 
 interface FormData {
   name: string;
@@ -18,8 +18,6 @@ const Contact: React.FC = () => {
     message: "",
   });
 
-  const [isSubmitting, setIsSubmitting] = useState(false);
-
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
@@ -32,22 +30,19 @@ const Contact: React.FC = () => {
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setIsSubmitting(true);
-
-    console.log("Form submitted:", formData);
-
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setFormData({
-        name: "",
-        email: "",
-        subject: "",
-        message: "",
-      });
-    }, 1000);
+    // Opens the visitor's email app with the message pre-filled.
+    const body = `${formData.message}\n\n— ${formData.name} (${formData.email})`;
+    window.location.href = `mailto:${email}?subject=${encodeURIComponent(
+      formData.subject
+    )}&body=${encodeURIComponent(body)}`;
   };
 
-  const contactInfo = [
+  const contactInfo: {
+    icon: React.ReactNode;
+    title: string;
+    content: string;
+    href?: string;
+  }[] = [
     {
       icon: <MapPin className="w-6 h-6 text-blue-600" />,
       title: "Address",
@@ -55,21 +50,28 @@ const Contact: React.FC = () => {
     },
     {
       icon: <Phone className="w-6 h-6 text-blue-600" />,
-      title: "Call Us",
-      content: "+255 625 799 380",
+      title: "Call",
+      content: phone,
+      href: phoneHref,
     },
     {
       icon: <Mail className="w-6 h-6 text-blue-600" />,
-      title: "Email Us",
-      content: "mwinamijr@gmail.com",
+      title: "Email",
+      content: email,
+      href: `mailto:${email}`,
+    },
+    {
+      icon: <MessageCircle className="w-6 h-6 text-blue-600" />,
+      title: "WhatsApp",
+      content: "Chat on WhatsApp",
+      href: whatsappUrl,
     },
   ];
 
   return (
-    <HelmetProvider>
+    <>
       <Helmet>
-        <meta charSet="utf-8" />
-        <title>Contact us | Mwinami Jr</title>
+        <title>Contact | Athumani Mwinami</title>
         <meta name="description" content={description} />
       </Helmet>
 
@@ -79,8 +81,8 @@ const Contact: React.FC = () => {
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-800 mb-4">Contact</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              For any inquiries, advice or any information. Please contact me
-              through ...
+              For projects, partnerships or TechDometz enquiries, reach me
+              directly — I usually reply within a day.
             </p>
           </div>
 
@@ -96,7 +98,13 @@ const Contact: React.FC = () => {
                       <h3 className="text-lg font-semibold text-gray-800 mb-1">
                         {item.title}
                       </h3>
-                      <p className="text-gray-600">{item.content}</p>
+                      {item.href ? (
+                        <a href={item.href} className="text-blue-600 hover:underline">
+                          {item.content}
+                        </a>
+                      ) : (
+                        <p className="text-gray-600">{item.content}</p>
+                      )}
                     </div>
                   </div>
                 ))}
@@ -198,10 +206,9 @@ const Contact: React.FC = () => {
                   <div className="md:col-span-2 text-center">
                     <button
                       type="submit"
-                      disabled={isSubmitting}
                       className="px-8 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
                     >
-                      {isSubmitting ? "Sending..." : "Send Message"}
+                      Send Message
                     </button>
                   </div>
                 </div>
@@ -210,7 +217,7 @@ const Contact: React.FC = () => {
           </div>
         </div>
       </section>
-    </HelmetProvider>
+    </>
   );
 };
 
