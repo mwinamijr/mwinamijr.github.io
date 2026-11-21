@@ -32,14 +32,14 @@ const Home: React.FC = () => (
 
       <div className="order-2 lg:order-1 flex items-center justify-center lg:w-1/2 px-6 py-12 lg:px-12 bg-white">
         <div className="max-w-2xl space-y-6">
-          <span className="inline-block text-xs font-semibold tracking-[0.18em] uppercase text-accent-600">
+          <span className="inline-block text-xs font-semibold tracking-[0.18em] uppercase text-orange-text">
             Founder &amp; CEO · {companyName}
           </span>
           <h2 className="text-2xl md:text-3xl font-semibold text-gray-800">
             Hi, I am Athumani Mwinami
           </h2>
 
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-600 min-h-[80px]">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-navy min-h-[80px]">
             <Typewriter
               options={{
                 strings: typewriterStrings,
@@ -66,7 +66,7 @@ const Home: React.FC = () => (
           <div className="flex flex-col sm:flex-row gap-4 pt-4">
             <Link
               to="/projects"
-              className="flex-1 text-center px-6 py-3 bg-accent-600 text-white font-semibold rounded-lg hover:bg-accent-700 transition shadow-md"
+              className="flex-1 text-center px-6 py-3 bg-orange text-navy-deep font-semibold rounded-lg hover:bg-orange-light transition shadow-md"
             >
               See My Work
             </Link>
@@ -74,7 +74,7 @@ const Home: React.FC = () => (
               href={companyUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex-1 inline-flex items-center justify-center gap-1 px-6 py-3 bg-slate-900 text-white font-semibold rounded-lg hover:bg-slate-800 transition shadow-md"
+              className="flex-1 inline-flex items-center justify-center gap-1 px-6 py-3 bg-navy text-white font-semibold rounded-lg hover:bg-navy-light transition shadow-md"
             >
               Visit {companyName} <ArrowUpRight className="w-4 h-4" />
             </a>

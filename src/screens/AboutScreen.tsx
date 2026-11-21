@@ -18,7 +18,7 @@ const SkillBar: React.FC<SkillProps> = ({ name, percentage }) => {
       </div>
       <div className="w-full bg-gray-200 rounded-full h-3 overflow-hidden">
         <div
-          className="bg-brand-600 h-full rounded-full transition-all duration-1000 ease-out"
+          className="bg-lightblue h-full rounded-full transition-all duration-1000 ease-out"
           style={{ width: `${percentage}%` }}
           role="progressbar"
           aria-valuenow={percentage}
@@ -100,7 +100,7 @@ const About: React.FC = () => {
                 <ul className="space-y-3">
                   {personalInfo.map((info, index) => (
                     <li key={index} className="flex items-start gap-2">
-                      <ChevronRight className="w-5 h-5 text-brand-600 flex-shrink-0 mt-0.5" />
+                      <ChevronRight className="w-5 h-5 text-navy flex-shrink-0 mt-0.5" />
                       <div>
                         <strong className="text-gray-800">{info.label}:</strong>{" "}
                         <span className="text-gray-600">{info.value}</span>
@@ -113,7 +113,7 @@ const About: React.FC = () => {
                 <ul className="space-y-3">
                   {professionalInfo.map((info, index) => (
                     <li key={index} className="flex items-start gap-2">
-                      <ChevronRight className="w-5 h-5 text-brand-600 flex-shrink-0 mt-0.5" />
+                      <ChevronRight className="w-5 h-5 text-navy flex-shrink-0 mt-0.5" />
                       <div>
                         <strong className="text-gray-800">{info.label}:</strong>{" "}
                         <span className="text-gray-600">{info.value}</span>

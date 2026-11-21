@@ -74,7 +74,7 @@ const Services: React.FC = () => {
                 href={companyUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-brand-600 font-semibold hover:underline"
+                className="text-navy font-semibold hover:underline"
               >
                 {companyName}
               </a>
@@ -88,17 +88,17 @@ const Services: React.FC = () => {
             {services.map((service, index) => (
               <div
                 key={index}
-                className="group bg-white rounded-lg shadow-md hover:shadow-xl transition-all duration-300 p-6 border border-gray-100 hover:border-brand-300"
+                className="group bg-white rounded-lg shadow-md hover:shadow-xl transition-all duration-300 p-6 border border-gray-100 hover:border-lightblue"
               >
                 <div className="flex items-start gap-4">
                   {/* Icon */}
-                  <div className="flex-shrink-0 p-3 bg-brand-50 rounded-lg text-brand-600 group-hover:bg-brand-600 group-hover:text-white transition-all duration-300">
+                  <div className="flex-shrink-0 p-3 bg-lightblue-soft rounded-lg text-navy group-hover:bg-navy group-hover:text-white transition-all duration-300">
                     {service.icon}
                   </div>
 
                   {/* Content */}
                   <div className="flex-1">
-                    <h4 className="text-xl font-bold text-gray-800 mb-3 group-hover:text-brand-600 transition-colors duration-300">
+                    <h4 className="text-xl font-bold text-gray-800 mb-3 group-hover:text-navy transition-colors duration-300">
                       {service.title}
                     </h4>
                     <p className="text-gray-600 leading-relaxed text-sm">

@@ -71,9 +71,9 @@ const Projects: React.FC = () => (
           {projects.map(({ icon: Icon, title, text, tags }) => (
             <div
               key={title}
-              className="group bg-white rounded-xl p-6 border border-gray-100 shadow-sm hover:shadow-xl hover:border-accent-300 transition"
+              className="group bg-white rounded-xl p-6 border border-gray-100 shadow-sm hover:shadow-xl hover:border-orange transition"
             >
-              <div className="w-12 h-12 mb-4 flex items-center justify-center rounded-lg bg-brand-50 text-brand-600 group-hover:bg-accent-600 group-hover:text-white transition">
+              <div className="w-12 h-12 mb-4 flex items-center justify-center rounded-lg bg-lightblue-soft text-navy group-hover:bg-orange group-hover:text-navy-deep transition">
                 <Icon className="w-6 h-6" />
               </div>
               <h3 className="text-xl font-bold text-gray-800 mb-2">{title}</h3>
@@ -94,7 +94,7 @@ const Projects: React.FC = () => (
             href={companyUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1 px-6 py-3 rounded-lg font-semibold text-white bg-accent-600 hover:bg-accent-700 transition"
+            className="inline-flex items-center gap-1 px-6 py-3 rounded-lg font-semibold text-navy-deep bg-orange hover:bg-orange-light transition"
           >
             Explore {companyName} <ArrowUpRight className="w-4 h-4" />
           </a>

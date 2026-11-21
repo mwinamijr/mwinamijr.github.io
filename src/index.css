@@ -1,20 +1,20 @@
 @import "tailwindcss";
 
-/* Brand colours from the TechDometz logo: blue #2ca3db, orange #f37028 */
+/* TechDometz brand colours (see BRAND-COLORS.md)
+   Core:     orange #F58220 · light blue #75C8ED · deep navy #123B56
+   Support:  shades/tints derived from the core colours for contrast */
 @theme {
-  --color-brand-50: #eaf6fc;
-  --color-brand-200: #b5def3;
-  --color-brand-300: #7fc8ec;
-  --color-brand-400: #4fb4e3;
-  --color-brand-500: #2ca3db;
-  --color-brand-600: #1f8fc4;
-  --color-brand-700: #18729e;
+  --color-orange: #F58220;          /* brand: buttons, highlights */
+  --color-orange-light: #FF9640;    /* button hover */
+  --color-orange-text: #B35A0B;     /* orange text on white (readable) */
 
-  --color-accent-300: #f9a77a;
-  --color-accent-400: #f68a4e;
-  --color-accent-500: #f37028;
-  --color-accent-600: #f37028;
-  --color-accent-700: #d65a15;
+  --color-lightblue: #75C8ED;       /* brand: accents, icons, text on dark */
+  --color-lightblue-mid: #BEE5F7;   /* borders */
+  --color-lightblue-soft: #E8F6FC;  /* tinted backgrounds */
+
+  --color-navy: #123B56;            /* brand: headings, header, dark sections */
+  --color-navy-light: #1C5175;      /* borders / hovers on navy */
+  --color-navy-deep: #0A2638;       /* footer, text on orange */
 }
 
 html {

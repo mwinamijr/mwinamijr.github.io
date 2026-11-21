@@ -12,11 +12,11 @@ const socialLinks = [
 ];
 
 const Footer: React.FC = () => (
-  <footer className="relative bg-slate-950 text-gray-400 border-t border-slate-800">
+  <footer className="relative bg-navy-deep text-gray-400 border-t border-navy-light">
     <div className="max-w-6xl mx-auto px-6 py-10 flex flex-col items-center space-y-6">
       <Link
         to="/"
-        className="text-2xl font-bold text-brand-300"
+        className="text-2xl font-bold text-lightblue"
       >
         {name}
       </Link>
@@ -29,14 +29,14 @@ const Footer: React.FC = () => (
             target="_blank"
             rel="noopener noreferrer"
             aria-label={label}
-            className="p-2 rounded-full bg-slate-800/60 hover:text-brand-300 hover:scale-110 transition"
+            className="p-2 rounded-full bg-navy-light/60 hover:text-lightblue hover:scale-110 transition"
           >
             <Icon className="w-5 h-5" />
           </a>
         ))}
       </div>
 
-      <div className="w-full h-px bg-gradient-to-r from-transparent via-slate-800 to-transparent" />
+      <div className="w-full h-px bg-gradient-to-r from-transparent via-navy-light to-transparent" />
 
       <div className="text-center text-sm md:text-base">
         <p>
@@ -49,14 +49,14 @@ const Footer: React.FC = () => (
             href={companyUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-brand-300 font-semibold hover:underline"
+            className="text-lightblue font-semibold hover:underline"
           >
             {companyName}
           </a>
         </p>
       </div>
     </div>
-    <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-brand-500 via-accent-500 to-brand-400" />
+    <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-lightblue via-orange to-lightblue" />
   </footer>
 );
 
